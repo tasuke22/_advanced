@@ -23,7 +23,7 @@
       <div class="p-footer__body">
         <a href="index.html">
           <div class="p-footer__logo">
-            <img src="./images/logo.svg" alt="ロゴ">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="">
           </div>
         </a>
         <span class="c-tel c-tel--white">
@@ -34,13 +34,13 @@
     </div>
 
   </div>
-  <div class="l-inner">
-    <div class="c-copy">
-      <small>&copy; 2020 Engress. </small>
-    </div>
-  </div>
-</footer>
 
+</footer>
+<div class="l-inner">
+  <div class="c-copy">
+    <small>&copy; 2020 Engress. </small>
+  </div>
+</div>
 <?php wp_footer(); ?>
 
 </body>

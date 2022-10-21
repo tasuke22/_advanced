@@ -55,7 +55,7 @@
         </p>
       </div>
       <div class="p-strength__img">
-        <img src="./images/strech1.png" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/strech1.png" alt="">
       </div>
     </div>
     <div class="p-strength__wrap p-strength__wrap--reverse">
@@ -72,7 +72,7 @@
         </p>
       </div>
       <div class="p-strength__img">
-        <img src="./images/strech2.png" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/strech2.png" alt="">
       </div>
     </div>
     <div class="p-strength__wrap">
@@ -88,7 +88,7 @@
         </p>
       </div>
       <div class="p-strength__img">
-        <img src="./images/strech3.png" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/strech3.png" alt="">
       </div>
     </div>
   </section>
@@ -110,7 +110,7 @@
             TOEFL iBT 100点を突破してコロンビア大学大学院に進学できました！
           </p>
           <div class="p-example__img">
-            <img src="./images/model01.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/model01.png" alt="">
           </div>
           <div class="p-example__info">
             <div class="p-example__job">会社員</div>
@@ -123,7 +123,7 @@
             半年でTOEFL 40点→100点を達成！コロンビア大学大学院に合格
           </p>
           <div class="p-example__img">
-            <img src="./images/model02.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/model02.png" alt="">
           </div>
           <div class="p-example__info">
             <div class="p-example__job">大学生</div>
@@ -136,7 +136,7 @@
             早稲田大学 国際教養学部AO入試合格！TOEFL iBT 109点
           </p>
           <div class="p-example__img">
-            <img src="./images/model03.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/model03.png" alt="">
           </div>
           <div class="p-example__info">
             <div class="p-example__job">高校生</div>
@@ -213,7 +213,7 @@
         <h2 class="c-section-title c-section-title--left">ブログ</h2>
         <div class="p-blog__wrap">
           <div class="c-blog__card">
-            <a href=""><img src="./images/blog01.jpg" alt=""></a>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog01.jpg" alt="">
           </div>
           <div class="p-blog__body">
             <p class="p-blog__text"><a href="">Engress説明会in大阪の模様をお伝えします</a></p>
@@ -222,7 +222,7 @@
         </div>
         <div class="p-blog__wrap">
           <div class="c-blog__card">
-            <a href=""><img src="./images/blog02.jpg" alt=""></a>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog02.jpg" alt="">
           </div>
           <div class="p-blog__body">
             <p class="p-blog__text"><a href="">Engressもくもく会でみんなでTOEFL学習をしませんか？</a></p>
@@ -231,7 +231,7 @@
         </div>
         <div class="p-blog__wrap">
           <div class="c-blog__card">
-            <a href=""><img src="./images/blog03.jpg" alt=""></a>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog03.jpg" alt="">
           </div>
           <div class="p-blog__body">
             <p class="p-blog__text"><a href="">TOEFL学習にはコーチング学習が最強である話</a></p>
