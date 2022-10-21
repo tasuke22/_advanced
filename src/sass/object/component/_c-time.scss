@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.c-time {
+  font-size: rem(12);
+  color: $darkBlue;
+  line-height: calc(20 / 12);
+}
+
+.c-time--sub {
+  font-size: rem(16);
+  line-height: calc(29 / 16);
+}

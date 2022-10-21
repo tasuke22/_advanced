@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.p-news-detail {
+}
+
+.p-news-detail__time {
+  text-align: end;
+}
+.p-news-detail__img {
+  width: calc(400 / 900 * 100%);
+}

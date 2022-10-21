@@ -1,0 +1,7 @@
+@use "global" as *;
+
+.l-header {
+  display: flex;
+  height: rem(80);
+  padding: rem(27) rem(15);
+}

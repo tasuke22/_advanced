@@ -1,0 +1,55 @@
+@use "global" as *;
+
+.p-price-structure {
+  color: $darkBlue;
+}
+
+.p-price-structure__title {
+  text-align: center;
+}
+
+.p-price-structure__wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: rem(60);
+  text-align: center;
+}
+.p-price-structure__admission {
+  width: rem(280);
+  padding: rem(34) rem(10);
+  background-color: $darkBlue;
+  color: $white;
+  font-weight: bold;
+  font-size: rem(22);
+  @include mq("md") {
+    font-size: rem(16);
+  }
+}
+.p-price-structure__plus {
+  width: rem(100);
+  background-color: $white;
+  color: $darkBlue;
+  font-size: rem(50);
+  @include mq("md") {
+    font-size: rem(30);
+  }
+}
+
+.p-price-structure__monthly {
+  width: rem(280);
+  padding: rem(34) rem(10);
+  background-color: $darkBlue;
+  color: $white;
+  font-weight: bold;
+  font-size: rem(22);
+  @include mq("md") {
+    font-size: rem(16);
+  }
+}
+.p-price-structure__text {
+  margin-top: rem(46);
+  font-size: rem(16);
+  line-height: calc(27 / 16);
+  text-align: start;
+}

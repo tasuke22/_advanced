@@ -1,0 +1,5 @@
+@use "global" as *;
+
+.js-question.is-open::after {
+  content: none;
+}

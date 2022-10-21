@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.p-document {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: rem(63);
+  padding-bottom: rem(53);
+  background: url("../images/document.jpg") no-repeat center center/cover;
+  text-align: center;
+}
+.p-document__title {
+  color: $white;
+  font-weight: bold;
+  font-size: rem(32);
+}
+.p-document__button {
+  margin-top: rem(16);
+}
+.p-document__contact {
+  margin-top: rem(22);
+}

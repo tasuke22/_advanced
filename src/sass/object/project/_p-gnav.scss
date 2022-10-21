@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.p-gnav__list {
+  display: flex;
+  font-weight: bold;
+  font-size: rem(16);
+  gap: 0 rem(28);
+  @include mq("md") {
+    display: block;
+    color: $white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.875rem;
+  }
+}

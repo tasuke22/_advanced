@@ -1,0 +1,24 @@
+@use "global" as *;
+
+.l-section__grid-col-2 {
+  display: flex;
+  justify-content: space-between;
+  @include mq("md") {
+    display: block;
+  }
+}
+
+.l-left {
+  width: calc(590 / 900 * 100%);
+  margin-top: rem(60);
+  @include mq("md") {
+    width: 100%;
+  }
+}
+.l-right {
+  width: calc(270 / 900 * 100%);
+  margin-top: rem(60);
+  @include mq("md") {
+    width: 100%;
+  }
+}

@@ -1,0 +1,72 @@
+@use "global" as *;
+
+.p-example {
+  background-color: $darkBlue;
+}
+.p-example__wrap {
+  display: flex;
+  margin-top: rem(137);
+  gap: 0 rem(35);
+  @include mq("md") {
+    display: block;
+  }
+}
+.p-example__body {
+  margin: auto;
+  max-width: rem(500);
+}
+
+.p-example__body:not(:first-child) {
+  @include mq("md") {
+    margin-top: rem(40);
+  }
+}
+
+.p-example__thoughts {
+  color: $white;
+  font-weight: bold;
+  font-size: rem(16);
+  line-height: calc(29 / 16);
+}
+.p-example__img {
+  display: flex;
+  justify-content: center;
+  width: rem(280);
+  height: rem(170);
+  background-color: $white;
+  @include mq("md") {
+    width: 100%;
+  }
+}
+.p-example__img img {
+  display: block;
+  margin-top: auto;
+}
+
+.p-example__info {
+  display: flex;
+  justify-content: space-between;
+}
+.p-example__job {
+  width: calc(100 / 280 * 100%);
+  margin-top: rem(16);
+  padding-left: rem(10);
+  background-color: $white;
+  color: $darkBlue;
+  padding-block: rem(8);
+}
+.p-example__name {
+  width: calc(170 / 280 * 100%);
+  margin-top: rem(16);
+  padding-left: rem(10);
+  background-color: $white;
+  color: $darkBlue;
+  padding-block: rem(8);
+}
+.p-example__point {
+  margin-top: rem(10);
+  padding-left: rem(10);
+  background-color: $white;
+  color: $darkBlue;
+  padding-block: rem(8);
+}

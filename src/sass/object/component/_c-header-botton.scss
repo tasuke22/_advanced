@@ -1,0 +1,20 @@
+@use "global" as *;
+
+.c-header-button {
+  width: rem(142);
+  min-height: rem(50);
+  padding: rem(13) rem(43);
+  border-radius: 5px;
+  background-color: $yellow;
+  color: $white;
+  font-weight: bold;
+  font-size: rem(14);
+  line-height: calc(24 / 14);
+}
+
+.c-header-button__dark-blue {
+  width: rem(137);
+  padding: rem(13) rem(26);
+  background-color: $darkBlue;
+  color: $white;
+}

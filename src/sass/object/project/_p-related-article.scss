@@ -1,0 +1,28 @@
+@use "global" as *;
+
+.p-related-article {
+}
+.p-related-article__title {
+  color: $white;
+  background-color: $darkBlue;
+  width: 100%;
+  padding: rem(18);
+  font-weight: bold;
+  line-height: calc(39 / 21);
+  display: flex;
+  justify-content: center;
+}
+.p-related-article__wrap {
+  display: flex;
+  margin-top: rem(40);
+  justify-content: space-between;
+}
+.p-related-article__img {
+  width: calc(100 / 270 * 100%);
+}
+.p-related-article__text {
+  font-size: rem(12);
+  line-height: calc(24 / 12);
+  text-decoration: underline;
+  width: calc(150 / 270 * 100%);
+}

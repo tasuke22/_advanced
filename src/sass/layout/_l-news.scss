@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.l-news {
+  margin-top: rem(90);
+  width: calc(400 / 900 * 100%);
+  @include mq("md") {
+    width: 100%;
+  }
+}

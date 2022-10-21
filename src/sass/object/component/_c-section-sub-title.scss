@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.c-section-sub-title {
+  font-weight: bold;
+  color: $darkBlue;
+  font-size: rem(32);
+}
+
+.c-section-sub-title {
+  text-align: start;
+}
+
+.c-section-sub-title--center {
+  text-align: center;
+}

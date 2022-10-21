@@ -1,0 +1,24 @@
+@use "global" as *;
+
+.p-news-summary {
+  text-align: center;
+}
+
+.p-news-summary__list {
+  margin-top: rem(45);
+}
+.p-news-summary__item {
+  display: flex;
+  padding-block: rem(24);
+  border-top: solid 1px #d5d5d5;
+}
+.p-news-summary__item:last-child {
+  border-bottom: solid 1px #d5d5d5;
+}
+.p-news-summary__text {
+  color: $darkBlue;
+  font-size: rem(16);
+  line-height: calc(24 / 16);
+  text-decoration: underline;
+  margin-left: rem(51);
+}

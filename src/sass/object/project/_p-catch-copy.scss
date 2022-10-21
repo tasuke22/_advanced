@@ -1,0 +1,45 @@
+@use "global" as *;
+
+.p-catch-copy {
+  padding-top: rem(63);
+  padding-bottom: rem(54);
+  background-color: $darkBlue;
+  text-align: center;
+}
+.p-catch-copy__text-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: rem(65);
+  gap: 0 rem(57);
+}
+.p-catch-copy__text {
+  color: $white;
+  line-height: calc(39 / 18);
+  @include mq("md") {
+    br {
+      display: none;
+    }
+  }
+}
+.p-catch-copy__box-wrap {
+  max-width: rem(900);
+  margin: 0 auto;
+  margin-top: rem(94);
+  background-color: $white;
+  outline: rem(5) solid $darkBlue;
+  outline-offset: -1rem;
+}
+
+.p-catch-copy__box p {
+  padding: rem(22) rem(20) 0;
+  color: $darkBlue;
+  font-weight: bold;
+  font-size: rem(36);
+}
+.p-catch-copy__box p:last-child {
+  display: block;
+  padding: rem(25) rem(20) rem(35);
+  color: $darkBlue;
+  font-size: rem(18);
+  line-height: calc(31 / 18);
+}

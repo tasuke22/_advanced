@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.p-news__wrap {
+  margin-top: rem(31);
+}
+.p-blog__time {
+  color: $darkBlue;
+  line-height: calc(20 / 12);
+}
+.p-news__body:not(:first-child) {
+  margin-top: rem(60);
+  @include mq("md") {
+    margin-top: rem(30);
+  }
+}
+.p-news__text {
+  color: $darkBlue;
+  font-size: rem(16);
+  line-height: calc(27 / 16);
+  text-decoration: underline;
+  margin-top: rem(16);
+}

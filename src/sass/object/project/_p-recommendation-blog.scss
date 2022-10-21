@@ -1,0 +1,62 @@
+@use "global" as *;
+
+.p-recommendation-blog {
+}
+.p-recommendation-blog__title {
+  font-size: rem(26);
+  font-weight: bold;
+  line-height: calc(39 / 26);
+}
+
+.p-recommendation-blog__wrap {
+  display: flex;
+  column-gap: rem(50);
+  margin-top: rem(28);
+  @include mq("md") {
+    display: block;
+    margin-inline: auto;
+  }
+}
+.p-recommendation-blog-card {
+  position: relative;
+  width: calc(210 / 590 * 100%);
+  @include mq("md") {
+    width: 100%;
+    margin-inline: auto;
+  }
+}
+.p-recommendation-blog-card img {
+  width: 100%;
+  margin: auto;
+}
+.p-recommendation-blog__category {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $darkBlue;
+  color: $white;
+  font-size: rem(12);
+  padding: rem(4) rem(9) rem(7);
+}
+
+.p-recommendation-blog__body {
+  color: $darkBlue;
+  text-align: start;
+  width: calc(350 / 590 * 100%);
+  @include mq("md") {
+    width: 100%;
+  }
+}
+.p-recommendation-blog__headline {
+  font-size: rem(18);
+  font-weight: bold;
+  line-height: calc(27 / 18);
+  text-decoration: underline;
+  margin-top: rem(29);
+}
+.p-recommendation-blog__text {
+  font-size: rem(16);
+  line-height: calc(24 / 16);
+  margin-top: rem(20);
+}

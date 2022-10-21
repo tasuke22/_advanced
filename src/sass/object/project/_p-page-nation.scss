@@ -1,0 +1,26 @@
+@use "global" as *;
+
+.p-page-nation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: rem(20);
+}
+
+.p-page-nation__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: rem(50);
+  height: rem(50);
+  background-color: $white;
+  color: $darkBlue;
+  border: solid 1px $darkBlue;
+  font-size: rem(16);
+  line-height: calc(27 / 16);
+  font-weight: bold;
+}
+.p-page-nation__number--current {
+  color: $white;
+  background-color: $darkBlue;
+}

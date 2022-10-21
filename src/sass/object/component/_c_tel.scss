@@ -1,0 +1,28 @@
+@use "global" as *;
+
+.c-tel {
+  color: $darkBlue;
+  font-weight: bold;
+  line-height: calc(27 / 16);
+  display: flex;
+  align-items: center;
+}
+.c-tel--white {
+  color: $white;
+}
+
+.c-tel::before {
+  content: "";
+  width: rem(14);
+  height: rem(15);
+  margin-right: rem(5);
+  background: url(../images/tell.svg) no-repeat center;
+}
+
+.c-tel--white::before {
+  content: "";
+  width: rem(14);
+  height: rem(15);
+  margin-right: rem(5);
+  background: url(../images/tell-white.svg) no-repeat center;
+}

@@ -1,0 +1,24 @@
+@use "global" as *;
+
+.p-blog__wrap {
+  display: flex;
+  column-gap: rem(20);
+}
+.p-blog__wrap:not(:first-child) {
+  margin-top: rem(31);
+}
+
+.p-blog__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: calc(150 / 430 * 100%);
+  flex: 1;
+}
+.p-blog__text {
+  font-size: rem(16);
+  font-weight: bold;
+  color: $darkBlue;
+  text-decoration: underline;
+  line-height: calc(27 / 16);
+}

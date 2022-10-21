@@ -1,0 +1,34 @@
+@use "global" as *;
+
+.p-contact {
+}
+.p-contact__wrap {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 0 rem(20);
+  color: $darkBlue;
+  align-items: flex-end;
+  padding-top: rem(20);
+  padding-bottom: rem(23);
+  @include mq(md) {
+    display: block;
+  }
+}
+.p-contact__contact {
+  display: block;
+  font-weight: bold;
+  font-size: rem(16);
+  line-height: calc(27 / 16);
+}
+.p-contact__tell {
+  font-weight: bold;
+  font-size: rem(36);
+  align-self: center;
+  // margin-top: auto;
+  line-height: calc(50 / 36);
+}
+.p-contact__time {
+  font-size: rem(16);
+  line-height: calc(27 / 16);
+}

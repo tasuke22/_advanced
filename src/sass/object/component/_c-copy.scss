@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.c-copy {
+  text-align: end;
+  color: $darkBlue;
+  padding-block: rem(12);
+  font-weight: bold;
+  font-size: rem(12);
+}

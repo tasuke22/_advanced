@@ -1,0 +1,21 @@
+@use "global" as *;
+
+.c-section-title {
+  font-weight: bold;
+  font-size: rem(36);
+  line-height: calc(50 / 36);
+  color: $darkBlue;
+  text-align: center;
+}
+
+
+.c-section-title--white {
+  color: $white;
+}
+
+.c-section-title--left {
+  text-align: start;
+  @include mq("md") {
+    text-align: center;
+  }
+}

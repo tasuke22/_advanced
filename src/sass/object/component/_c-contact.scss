@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.c-contact {
+  color: $white;
+  font-size: rem(16);
+  line-height: calc(27 / 16);
+  text-decoration: underline;
+}

@@ -1,0 +1,58 @@
+@use "global" as *;
+
+.p-flow__wrap {
+  display: grid;
+  margin-top: rem(53);
+  row-gap: rem(8);
+  grid-template-columns:
+    calc(65 / 900 * 1fr)
+    calc(215 / 900 * 1fr)
+    calc(620 / 900 * 1fr);
+  @include mq("md") {
+    display: block;
+    margin-inline: auto;
+    max-width: rem(500);
+  }
+}
+.p-flow__number {
+  padding: rem(23);
+  background-color: $yellow;
+  color: $white;
+  font-weight: bold;
+  font-size: rem(16);
+  @include mq("md") {
+    padding: rem(5);
+  }
+}
+.p-flow__title {
+  padding: rem(25) rem(21) rem(21) rem(21);
+  background-color: #f8f8f8;
+  color: $darkBlue;
+  font-weight: bold;
+  font-size: rem(18);
+}
+.p-flow__text {
+  padding: rem(25) rem(21) rem(21) rem(53);
+  background-color: #f8f8f8;
+  color: $darkBlue;
+  font-size: rem(16);
+  position: relative;
+  @include mq("md") {
+    padding-top: 0;
+    padding-left: rem(21);
+  }
+}
+.p-flow__text::before {
+  content: "";
+  top: 15px;
+  left: 0;
+  position: absolute;
+  display: inline-block;
+  background-color: #c3c3c3;
+  width: rem(1);
+  height: rem(35);
+  margin-left: auto;
+  @include mq("md") {
+    display: none;
+  }
+}

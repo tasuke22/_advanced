@@ -1,0 +1,87 @@
+@use "global" as *;
+
+.p-price-table__title {
+  text-align: center;
+}
+
+.p-price-table__wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-top: rem(106);
+  text-align: center;
+  @include mq("md") {
+    display: block;
+  }
+}
+
+.p-price-table__body {
+  display: flex;
+  flex-direction: column;
+  width: calc(220 / 900 * 100%);
+  padding-bottom: rem(94);
+  border: solid 0.5px $darkBlue;
+  @include mq("md") {
+    display: block;
+    width: 100%;
+  }
+}
+.p-price__plan {
+  padding: rem(17);
+  background-color: $darkBlue;
+  color: $white;
+  font-weight: bold;
+  font-size: rem(16);
+  line-height: calc(35 / 16);
+}
+
+.p-price-plan--recommendation {
+  margin-top: rem(-34);
+  background-color: $yellow;
+  color: $white;
+  outline: solid 0.5px $yellow;
+}
+
+.p-price__price {
+  margin-top: rem(30);
+  color: $darkBlue;
+  font-weight: bold;
+  font-size: rem(25);
+  line-height: calc(40 / 25);
+}
+
+.p-price__price--recommendation {
+  color: $yellow;
+}
+
+.p-price__tax {
+  margin-top: rem(14);
+  color: $darkBlue;
+  font-size: rem(16);
+  line-height: calc(27 / 16);
+}
+.p-price__detail__wrap {
+  display: flex;
+  flex-direction: column;
+  margin-top: rem(48);
+  row-gap: rem(23);
+  margin-inline: auto;
+  @include mq("md") {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.p-price__detail {
+  display: flex;
+  align-items: center;
+  color: $darkBlue;
+  font-size: rem(16);
+  line-height: calc(27 / 16);
+}
+.p-price__detail::before {
+  content: "";
+  display: inline-block;
+  width: rem(15);
+  height: rem(10);
+  margin-right: rem(5);
+  background: url("../images/check.svg") no-repeat center center/cover;
+}

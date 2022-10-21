@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.c-footer-button {
+  padding: rem(17) rem(108);
+  border-radius: rem(31);
+  background-color: $yellow;
+  color: $white;
+  font-weight: bold;
+}

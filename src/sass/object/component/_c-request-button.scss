@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.c-request-button {
+  width: rem(260);
+  padding: rem(14) rem(10) rem(15);
+  border-radius: rem(31);
+  background-color: $yellow;
+  font-weight: bold;
+  font-size: rem(16);
+  line-height: calc(29 / 16);
+  text-align: center;
+}
+
+.c-request-button button {
+  color: $white;
+}

@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.l-inner {
+  max-width: $innerWidth + $padding-pc * 2;
+  padding-inline: rem(strip-unit($padding-sp));
+  margin-inline: auto;
+  @include mq(md) {
+    width: 100%;
+    padding-inline: rem(strip-unit($padding-sp));
+    margin-inline: auto;
+  }
+}
+
+.l-inner--sm {
+  max-width: 750px;
+}

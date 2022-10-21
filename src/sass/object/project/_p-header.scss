@@ -1,0 +1,18 @@
+@use "global" as *;
+
+.p-header__wrap {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  @include mq("md") {
+    display: none;
+  }
+}
+.p-header__info {
+  text-align: end;
+}
+.p-header__button {
+  display: flex;
+  margin-left: rem(23);
+  gap: 0 rem(10);
+}

@@ -1,0 +1,21 @@
+@use "global" as *;
+
+.p-category__title {
+  color: $white;
+  background-color: $darkBlue;
+  width: 100%;
+  padding: rem(18);
+  font-weight: bold;
+  line-height: calc(39 / 21);
+  display: flex;
+  justify-content: center;
+}
+.p-category__list {
+  margin-top: rem(30);
+}
+.p-category__item {
+  font-size: rem(16);
+  font-weight: bold;
+  line-height: calc(39 / 16);
+  list-style: inside;
+}
