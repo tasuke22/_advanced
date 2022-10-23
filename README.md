@@ -7,8 +7,7 @@
 ## 使い方
 - ダウンロードしたフォルダをvscodeで開く
 - WordPressThemeフォルダを任意のフォルダ名に変更する
-- gulpfile.jsの7行目のWordPressThemeの部分を上の手順で変更したフォルダ名に変更する
-- gulpfile.jsの23行目にLocalのURLを記載する
+- gulpfile.jsの7行目のWordPressThemeの部分を上の手順で変更したフォルダ名に変更する gulpfile.jsの23行目にLocalのURLを記載する
 - style.cssの中身を任意の内容に変更する
 - ターミナルを開き、「 cd gulp 」とコマンドを入力する
 - ターミナルを開き、「 npm i 」とコマンドを入力する
@@ -26,3 +25,26 @@
 - CSS設計はFLOCSS( https://github.com/hiloki/flocss )を採用
 - PCファースト
 - rem記述を前提
+
+; 固定ページを作成(page.php)
+  ; 料金         page-price.php
+  ; お問い合わせ  page-contact.php
+  ; 送信完了画面  page-send.php
+
+カスタム投稿タイプ[https://www.youtube.com/watch?v=uCS_egYwWok&t=578s]
+投稿一覧のURLを作成する
+1 投稿ページを作成（一覧から詳細） 
+    archive-blog.php →  single-blog.ph
+2 お知らせ
+    archive-news.php →  single-news.php
+  
+
+menuを動くようにする
+  menuを動くようにする
+  template partsを作ったほうがいいか
+  get_template_parts
+  カカテゴの一覧を作れば良良さそ。
+  カスタム投稿タイプにfieldを追加する必要がある
+  advanced customized
+  カスタムテンプレートで固固定ペーをアレンジできる
+  pluginを消しただけではデータは残る

@@ -18,7 +18,6 @@
       </a>
     </div>
   </section>
-
   <section class="l-catch-copy p-catch-copy">
     <div class="l-inner">
       <p class="c-section-title c-section-title--white">

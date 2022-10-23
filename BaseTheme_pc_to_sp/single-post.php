@@ -1,9 +1,4 @@
 <?php get_header(); ?>
-
-<section class="p-sub-mv p-sub-mv--news">
-  <h2 class="p-sub-mv__title">お知らせ</h2>
-</section>
-
 <ol class="p-breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
   <div class="l-inner">
     <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -18,49 +13,38 @@
       </a>
       <meta itemprop="position" content="2" />
     </li>
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a itemprop="item" href="news_detail.html">
+        <span itemprop="name">お知らせのタイトルテキストテキストテキストテキストテキストテキストテキスト</span>
+      </a>
+      <meta itemprop="position" content="3" />
+    </li>
   </div>
 </ol>
 
-<section class="l-news-summary p-news-summary">
-  <div class="l-inner">
-    <h2 class="c-section-sub-title c-section-sub-title--center">お知らせ一覧</h2>
-    <ul class="p-news-summary__list">
-      <?php
-      if (have_posts()) :
-        while (have_posts()) : the_post(); ?>
-          <li class="p-news-summary__item">
-            <time class="c-time c-time--sub" datetime="2020-12-30"><?php the_time("Y-m-d"); ?> </time>
-            <p class="p-news-summary__text"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
-          </li>
-      <? endwhile;
-      endif;
-      ?>
-    </ul>
-  </div>
 
-</section>
-
-<div class="l-news-page-nation p-page-nation">
-  <a href="">
-    <div class="p-page-nation__number p-page-nation__number--current">1</div>
-  </a>
-  <a href="">
-    <div class="p-page-nation__number">2</div>
-  </a>
-  <a href="">
-    <div class="p-page-nation__number">3</div>
-  </a>
-  <a href="">
-    <div>…</div>
-  </a>
-  <a href="">
-    <div class="p-page-nation__number">5</div>
-  </a>
+<div class="l-inner">
+  <section class="p-news-detail">
+    <?php
+    if (have_posts()) :
+      while (have_posts()) : the_post(); ?>
+        <div class="p-blog-detail__title"><?php the_title(); ?></div>
+        <div class="p-news-detail__time">
+          <time class="c-time c-time--sub" datetime="2020-12-30"><?php the_time("Y-m-d"); ?></time>
+        </div>
+        <div class="p-blog-detail__contents">
+          <p class="p-blog-detail__contents-text">
+            <?php the_content(); ?>
+          </p>
+        </div>
+    <? endwhile;
+    endif;
+    ?>
+  </section>
 </div>
 
 
-
-<section class="l-news-document p-document">
+<section class="l-news_detail-document p-document">
   <div class="p-document__title">
     まずは無料で資料請求から
   </div>
