@@ -5,22 +5,15 @@
     <h2 class="p-sub-mv__title">コース・料金</h2>
   </section>
 
-  <ol class="p-breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+  <div class="p-breadcrumb">
     <div class="l-inner">
-      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <a itemprop="item" href="index.html">
-          <span itemprop="name">ホーム</span>
-        </a>
-        <meta itemprop="position" content="1" />
-      </li>
-      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <a itemprop="item" href="price.html">
-          <span itemprop="name">料金体系</span>
-        </a>
-        <meta itemprop="position" content="2" />
-      </li>
+      <?php
+      if (function_exists('bcn_display')) {
+        bcn_display();
+      }
+      ?>
     </div>
-  </ol>
+  </div>
 
   <section class="l-price-structure p-price-structure">
     <div class="l-inner">

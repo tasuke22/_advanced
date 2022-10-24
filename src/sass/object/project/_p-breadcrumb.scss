@@ -4,29 +4,6 @@
   background-color: #f8f8f8;
   width: 100%;
   padding-block: rem(19);
-  // margin: 0;
-}
-
-.p-breadcrumb li {
-  display: inline;
-}
-
-.p-breadcrumb li:after {
-  padding: 0 0.2em;
-  color: $darkBlue;
   font-size: rem(12);
-  content: ">";
-}
-
-.p-breadcrumb li:last-child:after {
-  content: "";
-}
-
-.p-breadcrumb li a {
   color: $darkBlue;
-  font-size: rem(12);
-}
-
-.p-breadcrumb li a:hover {
-  text-decoration: underline;
 }
