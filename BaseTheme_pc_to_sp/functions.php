@@ -122,16 +122,23 @@ add_filter('register_post_type_args', 'post_has_archive', 10, 2);
  *
  * @codex https://wpdocs.osdn.jp/%E9%96%A2%E6%95%B0%E3%83%AA%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9/register_nav_menus
  */
-// function my_menu_init() {
-// 	register_nav_menus(
-// 		array(
-// 			'global'  => 'ヘッダーメニュー',
-// 			'utility' => 'ユーティリティメニュー',
-// 			'drawer'  => 'ドロワーメニュー',
-// 		)
-// 	);
-// }
-// add_action( 'init', 'my_menu_init' );
+function my_menu_init()
+{
+	register_nav_menus(
+		[
+			'global_nav'  => 'グローバルナビゲーション',
+		]
+	);
+}
+add_action('init', 'my_menu_init');
+
+
+function getNavMenu(string $locationName): array
+{
+	$locations = get_nav_menu_locations();
+	$menu = wp_get_nav_menu_object($locations[$locationName]);
+	return wp_get_nav_menu_items($menu->term_id);
+}
 
 
 /**

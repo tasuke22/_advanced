@@ -18,20 +18,14 @@
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="">
       </a>
     </div>
+
     <nav class="p-gnav js-drawer-nav">
       <ul class="p-gnav__list">
-        <a href="index.html">
-          <li class="p-gnav__item">ホーム</li>
-        </a>
-        <a href="news.html">
-          <li class="p-gnav__item">お知らせ</li>
-        </a>
-        <a href="blog.html">
-          <li class="p-gnav__item">ブログ</li>
-        </a>
-        <a href="price.html">
-          <li class="p-gnav__item">コース・料金</li>
-        </a>
+        <?php foreach (getNavMenu('global_nav') as $menu) : ?>
+          <a href="<?php echo $menu->url; ?>">
+            <li class="p-gnav__item"><?php echo $menu->title; ?></li>
+          </a>
+        <?php endforeach; ?>
       </ul>
     </nav>
     <button type="button" class="js-drawer-btn">

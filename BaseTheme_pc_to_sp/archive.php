@@ -4,7 +4,7 @@
   <h2 class="p-sub-mv__title">お知らせ</h2>
 </section>
 
-<ol class="p-breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<!-- <ol class="p-breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
   <div class="l-inner">
     <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
       <a itemprop="item" href="index.html">
@@ -18,8 +18,17 @@
       </a>
       <meta itemprop="position" content="2" />
     </li>
+</div>
+</ol> -->
+<div class="p-breadcrumb">
+  <div class="l-inner">
+    <?php
+    if (function_exists('bcn_display')) {
+      bcn_display();
+    }
+    ?>
   </div>
-</ol>
+</div>
 
 <section class="l-news-summary p-news-summary">
   <div class="l-inner">
@@ -41,24 +50,12 @@
 </section>
 
 <div class="l-news-page-nation p-page-nation">
-  <a href="">
-    <div class="p-page-nation__number p-page-nation__number--current">1</div>
-  </a>
-  <a href="">
-    <div class="p-page-nation__number">2</div>
-  </a>
-  <a href="">
-    <div class="p-page-nation__number">3</div>
-  </a>
-  <a href="">
-    <div>…</div>
-  </a>
-  <a href="">
-    <div class="p-page-nation__number">5</div>
-  </a>
+  <?php
+  the_posts_pagination([
+    'mid_size' => 2,
+    'prev_next' => false,
+  ]); ?>
 </div>
-
-
 
 <section class="l-news-document p-document">
   <div class="p-document__title">

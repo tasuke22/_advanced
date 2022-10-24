@@ -1,25 +1,15 @@
 <footer class="l-footer p-footer">
   <div class="l-inner">
-
     <div class="p-footer__wrap">
-
       <nav class="p-footer__gnav">
         <ul class="p-footer__list">
-          <a href="index.html">
-            <li class="p-footer__item">ホーム</li>
-          </a>
-          <a href="news.html">
-            <li class="p-footer__item">お知らせ</li>
-          </a>
-          <a href="blog.html">
-            <li class="p-footer__item">ブログ</li>
-          </a>
-          <a href="price.html">
-            <li class="p-footer__item">コース・料金</li>
-          </a>
+          <?php foreach (getNavMenu('global_nav') as $menu) : ?>
+            <a href="<?php echo $menu->url; ?>">
+              <li class="p-footer__item"><?php echo $menu->title; ?></li>
+            </a>
+          <?php endforeach; ?>
         </ul>
       </nav>
-
       <div class="p-footer__body">
         <a href="index.html">
           <div class="p-footer__logo">

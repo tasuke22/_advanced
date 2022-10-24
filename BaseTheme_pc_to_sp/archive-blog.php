@@ -3,22 +3,15 @@
   <h2 class="p-sub-mv__title">ブログ</h2>
 </section>
 
-<ol class="p-breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<div class="p-breadcrumb">
   <div class="l-inner">
-    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-      <a itemprop="item" href="index.html">
-        <span itemprop="name">ホーム</span>
-      </a>
-      <meta itemprop="position" content="1" />
-    </li>
-    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-      <a itemprop="item" href="blog.html">
-        <span itemprop="name">ブログ</span>
-      </a>
-      <meta itemprop="position" content="2" />
-    </li>
+    <?php
+    if (function_exists('bcn_display')) {
+      bcn_display();
+    }
+    ?>
   </div>
-</ol>
+</div>
 
 <section class="l-new-blog p-new-blog">
   <div class="l-inner">
@@ -36,10 +29,10 @@
             <span class=" p-new-blog__category"><?php echo $terms[0]->name; ?></span>
           </div>
           <div class="p-new-blog__body">
-            <p class="c-time c-time--sub"><?php the_time("Y-m-d"); ?></ｐ>
-              <a href="<?php the_permalink(); ?>">
-                <p class="p-new-blog__headline"><?php the_title(); ?></p>
-              </a>
+            <p class="c-time c-time--sub"><?php the_time("Y-m-d"); ?></p>
+            <a href="<?php the_permalink(); ?>">
+              <p class="p-new-blog__headline"><?php the_title(); ?></p>
+            </a>
             <div class="p-new-blog__text"><?php the_content(); ?></div>
           </div>
         </div>
@@ -50,24 +43,12 @@
 </section>
 
 <div class="l-blog-page-nation p-page-nation">
-  <a href="">
-    <div class="p-page-nation__number p-page-nation__number--current">1</div>
-  </a>
-  <a href="">
-    <div class="p-page-nation__number">2</div>
-  </a>
-  <a href="">
-    <div class="p-page-nation__number">3</div>
-  </a>
-  <a href="">
-    <div>…</div>
-  </a>
-  <a href="">
-    <div class="p-page-nation__number">5</div>
-  </a>
+  <?php
+  the_posts_pagination([
+    'mid_size' => 2,
+    'prev_next' => false,
+  ]); ?>
 </div>
-
-
 
 <section class="l-blog-document p-document">
   <div class="p-document__title">
