@@ -42,17 +42,7 @@
 </div>
 
 <section class="l-news-document p-document">
-  <div class="p-document__title">
-    まずは無料で資料請求から
-  </div>
-  <a href="contact.html">
-    <div class="c-request-button-document p-document__button">
-      資料請求
-    </div>
-  </a>
-  <a href="contact.html">
-    <div class="c-contact p-document__contact">お問い合わせ</div>
-  </a>
+  <?php get_template_part('includes/document-request'); ?>
 </section>
 
 <section class="p-contact">

@@ -11,7 +11,7 @@
         </ul>
       </nav>
       <div class="p-footer__body">
-        <a href="index.html">
+        <a href="<?php echo esc_url(home_url('/')); ?>">
           <div class="p-footer__logo">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="">
           </div>

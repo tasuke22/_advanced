@@ -14,7 +14,7 @@
 
   <header class="l-header p-header">
     <div class="c-logo">
-      <a href="index.html">
+      <a href="<?php echo esc_url(home_url('/')); ?>">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="">
       </a>
     </div>
