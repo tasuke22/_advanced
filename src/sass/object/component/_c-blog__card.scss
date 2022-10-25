@@ -2,7 +2,7 @@
 @use "sass:math";
 
 .c-blog__card {
-  position: relative;
+  // position: relative;
   width: calc(150 / 430 * 100%);
   @include mq("md") {
     width: auto;

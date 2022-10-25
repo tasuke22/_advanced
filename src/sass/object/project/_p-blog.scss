@@ -1,8 +1,29 @@
 @use "global" as *;
 
+.p-blog__card {
+  position: relative;
+  width: calc(150 / 430 * 100%);
+  @include mq("md") {
+    width: auto;
+  }
+}
+.p-blog__card-category {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $darkBlue;
+  color: $white;
+  font-size: rem(12);
+  padding: rem(4) rem(9) rem(7);
+}
+
 .p-blog__wrap {
   display: flex;
   column-gap: rem(20);
+  @include mq("md") {
+    display: block;
+  }
 }
 .p-blog__wrap:not(:first-child) {
   margin-top: rem(31);

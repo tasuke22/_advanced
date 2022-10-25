@@ -210,50 +210,58 @@
 
       <section class="l-blog p-blog">
         <h2 class="c-section-title c-section-title--left">ブログ</h2>
-        <div class="p-blog__wrap">
-          <div class="c-blog__card">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog01.jpg" alt="">
-          </div>
-          <div class="p-blog__body">
-            <p class="p-blog__text"><a href="">Engress説明会in大阪の模様をお伝えします</a></p>
-            <time datetime="2020-12-01" class="c-time">2020-12-27</time>
-          </div>
-        </div>
-        <div class="p-blog__wrap">
-          <div class="c-blog__card">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog02.jpg" alt="">
-          </div>
-          <div class="p-blog__body">
-            <p class="p-blog__text"><a href="">Engressもくもく会でみんなでTOEFL学習をしませんか？</a></p>
-            <time datetime="2020-12-01" class="c-time">2020-12-01</time>
-          </div>
-        </div>
-        <div class="p-blog__wrap">
-          <div class="c-blog__card">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog03.jpg" alt="">
-          </div>
-          <div class="p-blog__body">
-            <p class="p-blog__text"><a href="">TOEFL学習にはコーチング学習が最強である話</a></p>
-            <time datetime="2020-12-01" class="c-time">2020-11–20</time>
-          </div>
-        </div>
+
+        <?php
+        $wp_query = new WP_Query();
+        $param = [
+          'posts_per_page' => '3', //表示件数。-1なら全件表示
+          'post_type' => 'blog', //カスタム投稿タイプの名称を入れる←ここ変える(投稿だったらpost.カスタム投稿ならslug名)
+          'order' => 'DESC'
+        ];
+        $wp_query->query($param);
+        if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
+            $terms = get_the_terms($post->ID, 'blog_category');
+        ?>
+            <div class="p-blog__wrap">
+              <div class="p-blog__card">
+                <div class="p-blog__card-category"><?php echo $terms[0]->name; ?></div>
+                <img src="<?php echo get_the_post_thumbnail_url();  ?>" alt="">
+              </div>
+              <div class="p-blog__body">
+                <p class="p-blog__text"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+                <time datetime="2020-12-01" class="c-time"><?php the_time("Y-m-d"); ?></time>
+              </div>
+            </div>
+        <?php
+          endwhile;
+        endif;
+        wp_reset_postdata()
+        ?>
+
       </section>
 
       <section class="l-news p-news">
         <h2 class="c-section-title c-section-title--left">お知らせ</h2>
         <div class="p-news__wrap">
-          <div class="p-news__body">
-            <time datetime="2020-12-01" class="c-time">2020-12-27</time>
-            <p class="p-news__text"><a href="">2021年のスケジュールについて</a></p>
-          </div>
-          <div class="p-news__body">
-            <time datetime="2020-12-01" class="c-time">2019-11-02</time>
-            <p class="p-news__text"><a href="">11月休校日のお知らせ</a></p>
-          </div>
-          <div class="p-news__body">
-            <time datetime="2020-12-01" class="c-time">2020-10-01</time>
-            <p class="p-news__text"><a href="">10月休校日のお知らせ</a></p>
-          </div>
+          <?php
+          $wp_query = new WP_Query();
+          $param = array(
+            'posts_per_page' => '3', //表示件数。-1なら全件表示
+            'post_type' => 'post', //カスタム投稿タイプの名称を入れる←ここ変える(投稿だったらpost.カスタム投稿ならslug名)
+            'order' => 'DESC'
+          );
+          $wp_query->query($param);
+          if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
+          ?>
+              <div class="p-news__body">
+                <time datetime="2020-12-01" class="c-time"><?php the_time("Y-m-d"); ?></time>
+                <p class="p-news__text"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+              </div>
+          <?php
+            endwhile;
+          endif;
+          wp_reset_postdata()
+          ?>
         </div>
       </section>
     </div>
