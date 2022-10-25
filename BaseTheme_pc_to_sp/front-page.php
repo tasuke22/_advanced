@@ -11,9 +11,9 @@
         <button>
           資料請求
         </button>
-        <a href="contact.html"></a>
+        <a href="contact"></a>
       </div>
-      <a href="contact.html">
+      <a href="contact">
         <div class="c-contact p-mv__contact">お問い合わせ</div>
       </a>
     </div>
@@ -280,6 +280,5 @@
     <p class="p-contact__tell">0123-456-7890</p>
     <p class="p-contact__time">平日 08:00~20:00</p>
   </div>
-</section>
 
-<?php get_footer(); ?>
+  <?php get_footer(); ?>

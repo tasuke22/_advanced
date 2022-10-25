@@ -40,12 +40,12 @@
       </div>
 
       <div class="p-header__button">
-        <a href="contact.html">
+        <a href="contact">
           <div class="c-header-button">
             資料請求
           </div>
         </a>
-        <a href="contact.html">
+        <a href="contact">
           <div class="c-header-button c-header-button__dark-blue">
             お問い合わせ
           </div>

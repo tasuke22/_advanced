@@ -140,7 +140,26 @@ function getNavMenu(string $locationName): array
 	return wp_get_nav_menu_items($menu->term_id);
 }
 
+add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
+function wpcf7_autop_return_false()
+{
+	return false;
+}
 
+
+/**
+ * お問い合わせ送信後、サンクスページに遷移
+ */
+add_action('wp_footer', 'add_thanks_page');
+function add_thanks_page()
+{ ?>
+	<script>
+		document.addEventListener('wpcf7mailsent', function(event) {
+			location = '<?php echo esc_url(home_url('/sent/')); ?>'; /* 遷移先のURL */
+		}, false);
+	</script>
+<?php
+}
 /**
  * 管理メニューの「投稿」に関する表示を「NEWS（任意）」に変更
  *

@@ -4,22 +4,6 @@
   <h2 class="p-sub-mv__title">お知らせ</h2>
 </section>
 
-<!-- <ol class="p-breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-  <div class="l-inner">
-    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-      <a itemprop="item" href="index.html">
-        <span itemprop="name">ホーム</span>
-      </a>
-      <meta itemprop="position" content="1" />
-    </li>
-    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-      <a itemprop="item" href="news.html">
-        <span itemprop="name">お知らせ</span>
-      </a>
-      <meta itemprop="position" content="2" />
-    </li>
-</div>
-</ol> -->
 <div class="p-breadcrumb">
   <div class="l-inner">
     <?php
