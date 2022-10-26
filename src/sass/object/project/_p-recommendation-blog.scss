@@ -28,6 +28,8 @@
 .p-recommendation-blog-card img {
   width: 100%;
   margin: auto;
+  aspect-ratio: 210/128;
+  object-fit: cover; 
 }
 .p-recommendation-blog__category {
   display: inline-block;

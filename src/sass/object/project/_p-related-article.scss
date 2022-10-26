@@ -20,6 +20,10 @@
 .p-related-article__img {
   width: calc(100 / 270 * 100%);
 }
+.p-related-article__img img{
+  aspect-ratio: 100/70;
+  object-fit: cover; 
+}
 .p-related-article__text {
   font-size: rem(12);
   line-height: calc(24 / 12);
