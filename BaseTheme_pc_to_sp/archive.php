@@ -23,7 +23,7 @@
         while (have_posts()) : the_post(); ?>
           <li class="p-news-summary__item">
             <time class="c-time c-time--sub" datetime="2020-12-30"><?php the_time("Y-m-d"); ?> </time>
-            <p class="p-news-summary__text"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+            <p class="p-news-summary__text"><a href="<?php the_permalink(); ?>"><?php echo wp_trim_words(get_the_title(), 40, '...'); ?></a></p>
           </li>
       <? endwhile;
       endif;

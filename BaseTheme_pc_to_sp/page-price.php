@@ -1,5 +1,9 @@
 <?php get_header(); ?>
-
+<?php
+  /*
+Template Name: コース・料金
+*/;
+?>
 <main class="l-main">
   <section class="p-sub-mv p-sub-mv--price">
     <h2 class="p-sub-mv__title">コース・料金</h2>
@@ -35,7 +39,7 @@
       <div class="p-price-table__wrap">
         <div class="p-price-table__body">
           <p class="p-price__plan">基礎プラン</p>
-          <p class="p-price__price">59,000円~</p>
+          <p class="p-price__price"><?php echo number_format(CFS()->get('price_base')) . "円~"; ?></p>
           <p class="p-price__tax">*月額（税抜価格）</p>
           <div class="p-price__detail__wrap">
             <p class="p-price__detail">カリキュラム作成</p>
@@ -45,7 +49,7 @@
         </div>
         <div class="p-price-table__body">
           <p class="p-price__plan">演習プラン</p>
-          <p class="p-price__price">75,000円~</p>
+          <p class="p-price__price"><?php echo number_format(CFS()->get('price_exercises')) . "円~"; ?></p>
           <p class="p-price__tax">*月額（税抜価格）</p>
           <div class="p-price__detail__wrap">
             <p class="p-price__detail">カリキュラム作成</p>
@@ -56,7 +60,7 @@
         </div>
         <div class="p-price-table__body">
           <p class="p-price__plan p-price-plan--recommendation">おすすめ<br>志望校対策プラン</p>
-          <p class="p-price__price p-price__price--recommendation">95,000円~</p>
+          <p class="p-price__price p-price__price--recommendation"><?php echo number_format(CFS()->get('price_recommendation')) . "円~"; ?></p>
           <p class="p-price__tax">*月額（税抜価格）</p>
           <div class="p-price__detail__wrap">
             <p class="p-price__detail">カリキュラム作成</p>
@@ -68,7 +72,7 @@
         </div>
         <div class="p-price-table__body">
           <p class="p-price__plan">フレックスプラン</p>
-          <p class="p-price__price">60,000円~</p>
+          <p class="p-price__price"><?php echo number_format(CFS()->get('price_flex')) . "円~"; ?></p>
           <p class="p-price__tax">*月額（税抜価格）</p>
           <div class="p-price__detail__wrap">
             <p class="p-price__detail">＊別途ご相談ください</p>

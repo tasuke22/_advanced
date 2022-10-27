@@ -1,4 +1,9 @@
 <?php get_header(); ?>
+<?php
+  /*
+Template Name: トップページ
+*/; 
+?>
 <main class="l-main">
   <section class="l-mv p-mv">
     <div class="p-mv__wrap">
@@ -106,42 +111,45 @@
       <div class="p-example__wrap">
         <div class="p-example__body">
           <p class="p-example__thoughts">
-            TOEFL iBT 100点を突破してコロンビア大学大学院に進学できました！
+            <?php echo CFS()->get('comment_1'); ?>
           </p>
           <div class="p-example__img">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/model01.png" alt="">
+            <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/images/model01.png" alt=""> -->
+            <img src="<?php echo CFS()->get('thumbnail_1'); ?>" alt="">
           </div>
           <div class="p-example__info">
-            <div class="p-example__job">会社員</div>
-            <div class="p-example__name">T.Fujiyamaさん</div>
+            <div class="p-example__job"><?php echo CFS()->get('attribute_1'); ?></div>
+            <div class="p-example__name"><?php echo CFS()->get('name_1'); ?></div>
           </div>
-          <div class="p-example__point">3ヶ月でTOEFL80→108点</div>
+          <div class="p-example__point"><?php echo CFS()->get('point_1'); ?></div>
         </div>
         <div class="p-example__body">
           <p class="p-example__thoughts">
-            半年でTOEFL 40点→100点を達成！コロンビア大学大学院に合格
+            <?php echo CFS()->get('comment_2'); ?>
           </p>
           <div class="p-example__img">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/model02.png" alt="">
+            <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/images/model02.png" alt=""> -->
+            <img src="<?php echo CFS()->get('thumbnail_2'); ?>" alt="">
           </div>
           <div class="p-example__info">
-            <div class="p-example__job">大学生</div>
-            <div class="p-example__name">Y.Takiyamaさん</div>
+            <div class="p-example__job"><?php echo CFS()->get('attribute_2'); ?></div>
+            <div class="p-example__name"><?php echo CFS()->get('name_2'); ?></div>
           </div>
-          <div class="p-example__point">6ヶ月でTOEFL40→100点</div>
+          <div class="p-example__point"><?php echo CFS()->get('point_2'); ?></div>
         </div>
         <div class="p-example__body">
           <p class="p-example__thoughts">
-            早稲田大学 国際教養学部AO入試合格！TOEFL iBT 109点
+            <?php echo CFS()->get('comment_3'); ?>
           </p>
           <div class="p-example__img">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/model03.png" alt="">
+            <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/images/model03.png" alt=""> -->
+            <img src="<?php echo CFS()->get('thumbnail_3'); ?>" alt="">
           </div>
           <div class="p-example__info">
-            <div class="p-example__job">高校生</div>
-            <div class="p-example__name">M.Yamadaさん</div>
+            <div class="p-example__job"><?php echo CFS()->get('attribute_3'); ?></div>
+            <div class="p-example__name"><?php echo CFS()->get('name_3'); ?></div>
           </div>
-          <div class="p-example__point">5ヶ月でTOEFL68→109点</div>
+          <div class="p-example__point"><?php echo CFS()->get('point_3'); ?></div>
         </div>
       </div>
     </div>
@@ -214,8 +222,8 @@
         <?php
         $wp_query = new WP_Query();
         $param = [
-          'posts_per_page' => '3', //表示件数。-1なら全件表示
-          'post_type' => 'blog', //カスタム投稿タイプの名称を入れる←ここ変える(投稿だったらpost.カスタム投稿ならslug名)
+          'posts_per_page' => '3',
+          'post_type' => 'blog',
           'order' => 'DESC'
         ];
         $wp_query->query($param);
@@ -228,7 +236,7 @@
                 <img src="<?php echo get_the_post_thumbnail_url();  ?>" alt="">
               </div>
               <div class="p-blog__body">
-                <p class="p-blog__text"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+                <p class="p-blog__text"><a href="<?php the_permalink(); ?>"><?php echo wp_trim_words(get_the_title(), 40, '...'); ?></a></p>
                 <time datetime="2020-12-01" class="c-time"><?php the_time("Y-m-d"); ?></time>
               </div>
             </div>
@@ -246,8 +254,8 @@
           <?php
           $wp_query = new WP_Query();
           $param = array(
-            'posts_per_page' => '3', //表示件数。-1なら全件表示
-            'post_type' => 'post', //カスタム投稿タイプの名称を入れる←ここ変える(投稿だったらpost.カスタム投稿ならslug名)
+            'posts_per_page' => '3',
+            'post_type' => 'post',
             'order' => 'DESC'
           );
           $wp_query->query($param);
@@ -255,7 +263,7 @@
           ?>
               <div class="p-news__body">
                 <time datetime="2020-12-01" class="c-time"><?php the_time("Y-m-d"); ?></time>
-                <p class="p-news__text"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+                <p class="p-news__text"><a href="<?php the_permalink(); ?>"><?php echo wp_trim_words(get_the_title(), 40, '...'); ?></a></p>
               </div>
           <?php
             endwhile;

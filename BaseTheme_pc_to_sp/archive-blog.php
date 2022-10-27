@@ -31,7 +31,7 @@
           <div class="p-new-blog__body">
             <p class="c-time c-time--sub"><?php the_time("Y-m-d"); ?></p>
             <a href="<?php the_permalink(); ?>">
-              <p class="p-new-blog__headline"><?php the_title(); ?></p>
+              <p class="p-new-blog__headline"><?php echo wp_trim_words(get_the_title(), 40, '...'); ?></p>
             </a>
             <div class="p-new-blog__text"><?php the_content(); ?></div>
           </div>

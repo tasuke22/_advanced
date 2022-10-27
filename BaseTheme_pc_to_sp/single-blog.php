@@ -74,7 +74,7 @@
             <p class="c-time c-time--sub"><?php the_time("Y-m-d"); ?></p>
             <a href="">
               <div class="p-recommendation-blog__headline">
-                <?php the_content(); ?>
+                <?php echo wp_trim_words(get_the_content(), 20, '...'); ?>
               </div>
             </a>
           </div>
