@@ -72,7 +72,7 @@
           </div>
           <div class="p-recommendation-blog__body">
             <p class="c-time c-time--sub"><?php the_time("Y-m-d"); ?></p>
-            <a href="">
+            <a href="<?php the_permalink(); ?>">
               <div class="p-recommendation-blog__headline">
                 <?php echo wp_trim_words(get_the_content(), 20, '...'); ?>
               </div>
