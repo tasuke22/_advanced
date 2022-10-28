@@ -25,9 +25,7 @@
           <div class="p-blog-detail__title"><?php the_title(); ?></div>
           <div class="p-blog-detail__wrap">
             <div class="p-blog-detail__sns">
-              <span class="p-blog-detail__facebook"><a href="">Like！ 0</a></span>
-              <span class="p-blog-detail__share"><a href="">Share</a></span>
-              <span class="p-blog-detail__twitter"><a href="">ツイート</a></span>
+              <?php echo do_shortcode('[addtoany]'); ?>
             </div>
             <div class="c-time c-time--sub"><?php the_time("Y-m-d"); ?></div>
           </div>

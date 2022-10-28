@@ -21,7 +21,11 @@
         <div class="p-related-article__img">
           <img src="<?php echo get_the_post_thumbnail_url();  ?>" alt="">
         </div>
-        <div class="p-related-article__text"><a href="<?php the_permalink(); ?>"><?php echo wp_trim_words(get_the_content(), 20, '...'); ?></a></div>
+        <div class="p-related-article__text">
+          <a href="<?php the_permalink(); ?>">
+            <?php echo wp_trim_words(get_the_content(), 20, '...'); ?>
+          </a>
+        </div>
       </div>
     <?php
     endforeach;
@@ -31,7 +35,20 @@
 
   <section class="l-category p-category">
     <h2 class="p-category__title">カテゴリー</h2>
+
+
     <ul class="p-category__list">
+      <?php
+      wp_list_categories([
+        'taxonomy' => 'blog_category', // タクソノミーの指定
+        'title_li' => '', // リストの外側に表示されるタイトルを非表示
+        // 'show_count' => 1, // カテゴリの投稿数を表示
+      ]); ?>
+    </ul>
+  </section>
+</div>
+
+<!-- <ul class="p-category__list">
       <a href="">
         <li class="p-category__item">カテゴリ1</li>
       </a>
@@ -41,6 +58,4 @@
       <a href="">
         <li class="p-category__item">カテゴリ3</li>
       </a>
-    </ul>
-  </section>
-</div>
+    </ul> -->

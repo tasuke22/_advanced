@@ -13,5 +13,14 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 1.875rem;
+    text-align: center;
+  }
+}
+
+
+
+.p-gnav__item{
+  @include mq("md"){
+    margin-top: rem(60);
   }
 }
