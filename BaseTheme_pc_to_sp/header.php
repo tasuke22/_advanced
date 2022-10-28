@@ -4,8 +4,12 @@
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="日本人へのTOEFL指導歴豊かな講師陣のコーチング型TOEFLスクール">
+  <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.ico" />
+  <title>Engress</title>
   <?php wp_head(); ?>
 </head>
 
