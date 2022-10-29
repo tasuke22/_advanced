@@ -4,9 +4,11 @@
       <nav class="p-footer__gnav">
         <ul class="p-footer__list">
           <?php foreach (getNavMenu('global_nav') as $menu) : ?>
-            <a href="<?php echo $menu->url; ?>">
-              <li class="p-footer__item"><?php echo $menu->title; ?></li>
-            </a>
+            <li class="p-footer__item">
+              <a href="<?php echo $menu->url; ?>">
+                <?php echo $menu->title; ?>
+              </a>
+            </li>
           <?php endforeach; ?>
         </ul>
       </nav>

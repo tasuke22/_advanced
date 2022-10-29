@@ -30,12 +30,16 @@
   outline-offset: -1rem;
 }
 
-.p-catch-copy__box p {
+.p-catch-copy__box{
   padding: rem(22) rem(20) 0;
   color: $darkBlue;
   font-weight: bold;
   font-size: rem(36);
 }
+.p-catch-copy__box span{
+  background: linear-gradient(transparent 75%, #f5a623 0%);
+}
+
 .p-catch-copy__box p:last-child {
   display: block;
   padding: rem(25) rem(20) rem(35);

@@ -33,7 +33,7 @@
             <a href="<?php the_permalink(); ?>">
               <p class="p-new-blog__headline"><?php echo wp_trim_words(get_the_title(), 40, '...'); ?></p>
             </a>
-            <div class="p-new-blog__text"><?php the_content(); ?></div>
+            <div class="p-new-blog__text"><?php echo wp_trim_words(get_the_content(), 100, '...'); ?></div>
           </div>
         </div>
     <? endwhile;

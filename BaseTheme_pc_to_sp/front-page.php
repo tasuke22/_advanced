@@ -2,7 +2,7 @@
 <?php
   /*
 Template Name: トップページ
-*/; 
+*/;
 ?>
 <main class="l-main">
   <section class="l-mv p-mv">
@@ -35,7 +35,8 @@ Template Name: トップページ
       </div>
       <div class="p-catch-copy__box-wrap">
         <div class="p-catch-copy__box">
-          <p>Engressは<br>TOEFLに特化したスクールです</p>
+          <p>Engressは</p>
+          <span>TOEFLに特化したスクールです</span>
           <p>完全オーダーメイドで、１人１人の悩みに合わせた最適な指導で<br>TOEFLの苦手分野を克服します。</p>
         </div>
       </div>

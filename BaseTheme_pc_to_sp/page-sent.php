@@ -15,6 +15,10 @@
   内容を確認した後、担当者よりご連絡いたします
 </p>
 
-<span class="c-back">ホームへ戻る</span>
+<span class="c-back">
+  <a href="<?php echo esc_url(home_url('/')); ?>">
+    ホームへ戻る
+  </a>
+</span>
 
 <?php get_footer(); ?>

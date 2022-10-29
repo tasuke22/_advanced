@@ -16,7 +16,6 @@
 <section class="l-new-blog p-new-blog">
   <div class="l-inner">
 
-  
     <?php $terms = get_the_terms($post->ID, 'blog_category'); ?>
     <h2 class="c-section-sub-title p-new-blog__title"><?php echo $terms[0]->name . "の一覧"; ?></h2>
 
@@ -33,7 +32,7 @@
             <a href="<?php the_permalink(); ?>">
               <p class="p-new-blog__headline"><?php echo wp_trim_words(get_the_title(), 40, '...'); ?></p>
             </a>
-            <div class="p-new-blog__text"><?php the_content(); ?></div>
+            <div class="p-new-blog__text"><?php echo wp_trim_words(get_the_content(), 100, '...'); ?></div>
           </div>
         </div>
     <? endwhile;

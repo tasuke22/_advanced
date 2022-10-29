@@ -34,7 +34,7 @@
 
 
   <section class="l-category p-category">
-    <h2 class="p-category__title">カテゴリー</h2>
+    <h2 class="p-category__title">カテゴリ</h2>
 
 
     <ul class="p-category__list">
@@ -42,20 +42,8 @@
       wp_list_categories([
         'taxonomy' => 'blog_category', // タクソノミーの指定
         'title_li' => '', // リストの外側に表示されるタイトルを非表示
-        // 'show_count' => 1, // カテゴリの投稿数を表示
+        'show_count' => 1, // カテゴリの投稿数を表示
       ]); ?>
     </ul>
   </section>
 </div>
-
-<!-- <ul class="p-category__list">
-      <a href="">
-        <li class="p-category__item">カテゴリ1</li>
-      </a>
-      <a href="">
-        <li class="p-category__item">カテゴリ2</li>
-      </a>
-      <a href="">
-        <li class="p-category__item">カテゴリ3</li>
-      </a>
-    </ul> -->

@@ -21,9 +21,9 @@
 .p-contactForm__phone,
 .p-contactForm__textarea {
   width: 100%;
-  font-size: rem(12);
+  font-size: rem(16);
   line-height: calc(20 / 12);
-  padding: rem(19);
+  padding: rem(10);
   margin-top: rem(12);
 }
 .p-contactForm__radioWrap {
@@ -73,7 +73,6 @@
 .wpcf7-list-item{
   margin-top: rem(10);
 }
-
 .p-contactForm__button-wrap {
   text-align: center;
 }
