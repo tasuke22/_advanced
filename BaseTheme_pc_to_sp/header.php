@@ -14,8 +14,8 @@
 </head>
 
 <body>
-  <!-- <?php body_class(); ?> -->
-  <!-- <?php wp_body_open(); ?> -->
+  <?php body_class(); ?>
+  <?php wp_body_open(); ?>
 
   <header class="l-header p-header">
     <div class="c-logo">
@@ -27,9 +27,9 @@
     <nav class="p-gnav js-drawer-nav">
       <ul class="p-gnav__list">
         <?php foreach (getNavMenu('global_nav') as $menu) : ?>
-          <a href="<?php echo $menu->url; ?>">
-            <li class="p-gnav__item"><?php echo $menu->title; ?></li>
-          </a>
+        <a href="<?php echo $menu->url; ?>">
+          <li class="p-gnav__item"><?php echo $menu->title; ?></li>
+        </a>
         <?php endforeach; ?>
       </ul>
     </nav>
@@ -45,12 +45,12 @@
       </div>
 
       <div class="p-header__button">
-        <a href="contact">
+        <a href="/contact">
           <div class="c-header-button">
             資料請求
           </div>
         </a>
-        <a href="contact">
+        <a href="/contact">
           <div class="c-header-button c-header-button__dark-blue">
             お問い合わせ
           </div>
